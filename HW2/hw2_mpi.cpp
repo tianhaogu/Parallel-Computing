@@ -148,10 +148,10 @@ int main(int argc, char** argv) {
         }
         sum_all += curr_sum_all;
         sum_square_all += curr_sum_square_all;
-        cout << "Sum of entries is: " << sum_all << endl;
-        cout << "Sum of square of entries is: " << sum_square_all << endl;
+        cout << "Sum of entries for " << "m = " << m << ", n = " << n << ", and p = " << p << " is: " << sum_all << endl;
+        cout << "Sum of square of entries for " << "m = " << m << ", n = " << n << ", and p = " << p << " is: " << sum_square_all << endl;
         end_time = MPI_Wtime();
-        cout << "Elapsed time is: " << end_time << endl;
+        cout << "Elapsed time for " << "m = " << m << ", n = " << n << ", and p = " << p << " is: " << end_time << " seconds" << endl;
     }
     else {
         MPI_Send(&curr_sum_all, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD);

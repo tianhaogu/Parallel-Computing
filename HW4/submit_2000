@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --job-name=cuda_hw4
+#SBATCH --mail-type=BEGIN,END
+#SBATCH --nodes=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=00:05:00
+#SBATCH --account=eecs587f22_class
+#SBATCH --partition=gpu
+
+
+
+
+#make sure to load the cuda module before running
+#module load cuda
+#make sure to compile your program using nvcc
+#nvcc -o hw4_cuda.out hw4_cuda.cu
+./hw4_cuda.out 2000 10 > submit_2000.txt
